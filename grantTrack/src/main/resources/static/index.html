@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Research Grant Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Research Grant Application Status Tracker</h1>
+
+<!-- Faculty -->
+<div class="box">
+    <h2>Register Faculty</h2>
+
+    <input id="fname" placeholder="Name">
+    <input id="femail" placeholder="Email">
+    <input id="fdept" placeholder="Department">
+    <input id="fdesig" placeholder="Designation">
+    <input id="fpass" type="password" placeholder="Password">
+    <input id="frole" placeholder="Role">
+
+    <button onclick="addFaculty()">Register</button>
+</div>
+
+<!-- Stage -->
+<div class="box">
+    <h2>Add Stage</h2>
+
+    <input id="sname" placeholder="Stage Name">
+    <input id="sdesc" placeholder="Description">
+    <input id="sorder" type="number" placeholder="Order">
+
+    <button onclick="addStage()">Add Stage</button>
+</div>
+
+<!-- Application -->
+<div class="box">
+    <h2>Submit Application</h2>
+
+    <input id="afaculty" type="number" placeholder="Faculty ID">
+    <input id="astage" type="number" placeholder="Stage ID">
+
+    <input id="atitle" placeholder="Title">
+    <textarea id="aabstract" placeholder="Abstract"></textarea>
+    <input id="aamount" type="number" placeholder="Requested Amount">
+    <input id="adate" type="date">
+
+    <button onclick="addApplication()">Submit</button>
+</div>
+
+<!-- Expenditure -->
+<div class="box">
+    <h2>Add Expenditure</h2>
+
+    <input id="eapp" type="number" placeholder="Application ID">
+    <input id="etitle" placeholder="Title">
+    <input id="eamount" type="number" placeholder="Amount">
+    <input id="edate" type="date">
+    <input id="edesc" placeholder="Description">
+
+    <select id="eapprove">
+        <option value="true">Approved</option>
+        <option value="false">Not Approved</option>
+    </select>
+
+    <button onclick="addExpense()">Save</button>
+</div>
+
+<p id="msg"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
